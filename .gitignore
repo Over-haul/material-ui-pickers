@@ -18,7 +18,6 @@ coverage
 
 # Cache directory
 .npm
-cypress
 .next
 
 # Optional eslint cache
