@@ -4,7 +4,7 @@ import Day from './Day';
 import DayWrapper from './DayWrapper';
 import CalendarHeader from './CalendarHeader';
 import CircularProgress from '@material-ui/core/CircularProgress';
-import SlideTransition, { SlideDirection } from './SlideTransition';
+import { SlideDirection } from './SlideTransition';
 import { Theme } from '@material-ui/core/styles';
 import { VariantContext } from '../../wrappers/Wrapper';
 import { MaterialUiPickersDate } from '../../typings/date';
@@ -324,17 +324,13 @@ export class Calendar extends React.Component<CalendarProps, CalendarState> {
           disableNextMonth={this.shouldDisableNextMonth()}
         />
 
-        <SlideTransition
-          slideDirection={slideDirection}
-          transKey={currentMonth!.toString()}
-          className={classes.transitionContainer}
-        >
+        <div className={classes.transitionContainer}>
           <>
             {(this.state.loadingQueue > 0 && (
               <div className={classes.progressContainer}>{loadingElement}</div>
             )) || <div>{this.renderWeeks()}</div>}
           </>
-        </SlideTransition>
+        </div>
       </React.Fragment>
     );
   }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Typography from '@material-ui/core/Typography';
-import SlideTransition, { SlideDirection } from './SlideTransition';
+import { SlideDirection } from './SlideTransition';
 import IconButton, { IconButtonProps } from '@material-ui/core/IconButton';
 import { DateType } from '@date-io/type';
 import { useUtils } from '../../_shared/hooks/useUtils';
@@ -93,15 +93,11 @@ export const CalendarHeader: React.SFC<CalendarHeaderProps> = ({
           {rtl ? rightArrowIcon : leftArrowIcon}
         </IconButton>
 
-        <SlideTransition
-          slideDirection={slideDirection}
-          transKey={currentMonth.toString()}
-          className={classes.transitionContainer}
-        >
+        <div className={classes.transitionContainer}>
           <Typography align="center" variant="body1">
             {utils.getCalendarHeaderText(currentMonth)}
           </Typography>
-        </SlideTransition>
+        </div>
 
         <IconButton
           {...rightArrowButtonProps}

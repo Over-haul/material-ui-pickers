@@ -14,13 +14,13 @@
     }
   },
   "build/dist/material-ui-pickers.umd.js": {
-    "bundled": 216161,
-    "minified": 85029,
-    "gzipped": 24524
+    "bundled": 171219,
+    "minified": 73707,
+    "gzipped": 21135
   },
   "build/dist/material-ui-pickers.umd.min.js": {
-    "bundled": 170202,
-    "minified": 73583,
-    "gzipped": 21412
+    "bundled": 136769,
+    "minified": 63243,
+    "gzipped": 18224
   }
 }
